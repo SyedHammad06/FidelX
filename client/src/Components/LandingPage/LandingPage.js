@@ -47,7 +47,7 @@ const landingPage = (props) => {
           websites, branding and marketing campaigns for success-driven
           organisations that want to be seen and heard.
         </p>
-        <Button to='/'>
+        <Button to='#Contact'>
           <span>Send Us a Message</span>
           <ArrowRightAltRounded fontSize='large' />
         </Button>
