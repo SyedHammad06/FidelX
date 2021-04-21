@@ -2,15 +2,16 @@
 
 .Button {
   width: 35rem;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   background: none;
-  border: 1px solid $color-brown;
+  border: 2px solid $color-brown;
   border-radius: 5px;
   position: relative;
   transition: all 0.3s;
 
   &__link {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    font-weight: 600;
     color: $color-brown;
     text-decoration: none;
     display: flex;
@@ -46,7 +47,7 @@
   }
 
   &:hover {
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     cursor: pointer;
   }
 
