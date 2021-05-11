@@ -1,0 +1,54 @@
+@use '../../sass/variables' as *;
+@use '../../sass/mixins' as *;
+
+.Button {
+  margin-top: 2rem;
+  background: none;
+  border: none;
+
+  & svg {
+    fill: $color-white;
+  }
+
+  &__small {
+    & a {
+      font-size: 1.8rem;
+      text-decoration: none;
+      font-family: inherit;
+      font-weight: 700;
+      color: $text-white;
+    }
+
+    & span {
+      margin-left: 1rem;
+    }
+
+    & svg {
+      margin-bottom: -0.4rem;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+@media (max-width: 42em) {
+  .Button__small {
+    & a {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media (max-width: 31.25em) {
+  .Button__small {
+    & a {
+      font-size: 1.4rem;
+    }
+
+    & svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-bottom: -0.2rem;
+    }
+  }
+}

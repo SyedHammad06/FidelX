@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.4;
+}
+
+@media (max-width: 51em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 39.5em) {
+  html {
+    font-size: 40%;
+  }
+}

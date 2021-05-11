@@ -1,0 +1,115 @@
+@use '../../sass/variables' as *;
+@use '../../sass/mixins' as *;
+
+.Team {
+  padding: $main-padding;
+
+  &__heading {
+    font-size: 3.5rem;
+    margin-top: -2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+
+  &__card-box {
+    box-shadow: 0px 3px 4px $color-white;
+    margin-bottom: 1rem;
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0px 6px 6px $color-white;
+    }
+  }
+
+  &__card {
+    width: 28%;
+    transition: all 250ms;
+
+    &--img {
+      width: 100%;
+      height: 40rem;
+      object-fit: cover;
+    }
+
+    &--text {
+      width: 100%;
+      height: 10rem;
+      @include flex(space-between, center);
+      flex-direction: column;
+      margin-top: -0.5rem;
+      padding: 2.5rem 0;
+      color: $color-black;
+      background-color: white;
+    }
+
+    &--heading {
+      font-size: 2rem;
+    }
+
+    &--post {
+      font-size: 1.6rem;
+    }
+  }
+
+  & button {
+    width: 100%;
+    & a {
+      font-weight: 400;
+    }
+  }
+
+  &__card-container {
+    width: 100%;
+    @include flex(space-between, center);
+  }
+}
+
+@media (max-width: 70.625em) {
+  .Team__card--img {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .Team__card--img {
+    height: 25rem;
+  }
+
+  .Team__card--text {
+    height: 8rem;
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 31.25em) {
+  .Team {
+    padding: $phone-padding;
+
+    &__heading {
+      margin-top: 2rem;
+    }
+
+    &__card-container {
+      display: block;
+    }
+
+    &__card {
+      width: 50%;
+      margin: 5rem auto;
+
+      &--img {
+        height: 40rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 28.125em) {
+  .Team__card {
+    width: 60%;
+
+    &--img {
+      height: 32rem;
+    }
+  }
+}

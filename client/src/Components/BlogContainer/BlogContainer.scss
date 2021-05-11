@@ -1,0 +1,128 @@
+@use '../../sass/variables' as *;
+@use '../../sass/mixins' as *;
+
+.BlogContainer {
+  color: $text-black;
+  padding: $main-padding;
+  background-color: $color-white;
+
+  &__heading {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__card-container {
+    width: 100%;
+    height: 50rem;
+    @include flex(space-between, center);
+  }
+
+  &__card {
+    width: 65rem;
+    height: 32rem;
+    color: $text-white;
+    transition: all 250ms;
+    background-color: $color-black;
+    @include flex(space-between, center);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 4px 6px 6px $color-white;
+    }
+  }
+
+  &__card-1 {
+    align-self: flex-start;
+  }
+
+  &__card-2 {
+    align-self: flex-end;
+  }
+
+  &__sub-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+    height: 100%;
+  }
+
+  &__left {
+    padding: 0 2.5rem;
+    text-align: center;
+    @include flex(center, center);
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 90em) {
+  .BlogContainer__card {
+    width: 48%;
+    height: 25rem;
+  }
+}
+
+@media (max-width: 62.5em) {
+  .BlogContainer__card {
+    height: 20rem;
+  }
+
+  .BlogContainer__card-container {
+    height: 42rem;
+  }
+
+  .BlogContainer__sub-heading {
+    font-size: 1.6rem;
+  }
+
+  .BlogContainer button a {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 53.125em) {
+  .BlogContainer__card-container {
+    display: block;
+  }
+
+  .BlogContainer__card {
+    width: 60%;
+    height: 20rem;
+    margin: 0 auto;
+  }
+
+  .BlogContainer__card-1 {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 31.25em) {
+  .BlogContainer {
+    padding: $phone-padding;
+  }
+
+  .BlogContainer__card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 20em) {
+  .BlogContainer__heading {
+    font-size: 3rem;
+  }
+  .BlogContainer__card {
+    width: 90%;
+  }
+}
