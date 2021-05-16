@@ -4,16 +4,24 @@ import './Button.scss';
 interface Props {
   text: string;
   size: 'small' | 'large';
+  to?: string;
+  type?: 'button' | 'reset' | 'submit';
 }
 
-export const Button: React.FC<Props> = ({ text, size }): JSX.Element => {
+export const Button: React.FC<Props> = ({
+  text,
+  size,
+  to,
+  type,
+}): JSX.Element => {
   return (
     <button
+      type={type ? type : 'button'}
       className={
         size === 'small' ? 'Button Button__small' : 'Button Button__large'
       }
     >
-      <a href='#about'>
+      <a href={to}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='24'

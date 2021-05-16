@@ -6,7 +6,6 @@
   padding: 3rem 12rem 5rem 12rem;
 
   &__heading {
-    opacity: 0;
     font-size: 3.5rem;
     text-align: center;
     margin-bottom: 5rem;
@@ -42,7 +41,6 @@
   &__card-2,
   &__card-3 {
     width: 48%;
-    opacity: 0;
     margin-bottom: 4rem;
     @include flex(space-between, center);
   }

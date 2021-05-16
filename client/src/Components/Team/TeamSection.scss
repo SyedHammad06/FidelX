@@ -58,6 +58,13 @@
     }
   }
 
+  &__vertical-line {
+    width: 10rem;
+    border: 1px solid $color-white;
+    margin: 10rem auto 0 auto;
+    transform: rotateZ(90deg);
+  }
+
   &__card-container {
     width: 100%;
     @include flex(space-between, center);

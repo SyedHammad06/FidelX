@@ -18,5 +18,7 @@ html {
 @media (max-width: 39.5em) {
   html {
     font-size: 40%;
+    width: 100%;
+    overflow-x: hidden;
   }
 }

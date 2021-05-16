@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '../../Components/Button/Button';
+import { NavLink } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import './LandingPage.scss';
@@ -7,15 +7,10 @@ import './LandingPage.scss';
 interface Props {
   landingPageRef: React.RefObject<HTMLDivElement>;
   displayMenu: boolean;
-  dark: boolean;
 }
 
 interface Component {
   display: boolean;
-}
-
-interface Dark {
-  dark: boolean;
 }
 
 const MainHeader = styled.header<Component>`
@@ -32,17 +27,12 @@ const MainHeader = styled.header<Component>`
 export const LandingPage: React.FC<Props> = ({
   landingPageRef,
   displayMenu,
-  dark,
 }): JSX.Element => {
   const [display, setDisplay] = useState(false);
 
-  const checkMenu = (clN: string, oldClN: string, darkClN: string) => {
+  const checkMenu = (clN: string, oldClN: string) => {
     if (displayMenu) {
-      if (dark) {
-        return darkClN;
-      } else {
-        return clN;
-      }
+      return clN;
     }
     return oldClN;
   };
@@ -74,9 +64,9 @@ export const LandingPage: React.FC<Props> = ({
         classNames='navItem'
       >
         <li className='LandingPage__item'>
-          <a href='/' className='LandingPage__link'>
+          <NavLink to='/' className='LandingPage__link'>
             Home
-          </a>
+          </NavLink>
         </li>
       </CSSTransition>
       <CSSTransition
@@ -86,9 +76,9 @@ export const LandingPage: React.FC<Props> = ({
         classNames='nav1'
       >
         <li className='LandingPage__item'>
-          <a href='/work' className='LandingPage__link'>
+          <NavLink to='/works' className='LandingPage__link'>
             Our Work
-          </a>
+          </NavLink>
         </li>
       </CSSTransition>
       <CSSTransition
@@ -98,9 +88,9 @@ export const LandingPage: React.FC<Props> = ({
         classNames='nav2'
       >
         <li className='LandingPage__item'>
-          <a href='/blog' className='LandingPage__link'>
+          <NavLink to='/blog' className='LandingPage__link'>
             Blogs
-          </a>
+          </NavLink>
         </li>
       </CSSTransition>
       <CSSTransition
@@ -124,8 +114,7 @@ export const LandingPage: React.FC<Props> = ({
         display={display}
         className={checkMenu(
           'LandingPage__header LandingPage__menu',
-          'LandingPage__header',
-          'LandingPage__header LandingPage__menu--dark'
+          'LandingPage__header'
         )}
       >
         <div className='LandingPage__logo-container'>
@@ -167,7 +156,6 @@ export const LandingPage: React.FC<Props> = ({
             their businesses through websites optimized for conversion with
             visual hierarchy.
           </p>
-          <Button text='Read More' size='small' />
         </div>
       </section>
       <hr className='LandingPage__vertical-line' />

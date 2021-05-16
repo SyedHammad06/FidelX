@@ -5,16 +5,22 @@ import Pic3 from '../../assets/Images/hammad.jpg';
 import './TeamSection.scss';
 import { Button } from '../Button/Button';
 
-interface Props {
-  teamRef: React.RefObject<HTMLDivElement>;
-}
+interface Props {}
 
-export const TeamSection: React.FC<Props> = ({ teamRef }): JSX.Element => {
+export const TeamSection: React.FC<Props> = (): JSX.Element => {
   return (
-    <div className='Team' ref={teamRef}>
-      <h2 className='Team__heading'>Meet our team !!</h2>
+    <div className='Team'>
+      <h2 className='Team__heading' data-aos='fade-in'>
+        Meet our team !!
+      </h2>
       <div className='Team__card-container'>
-        <div className='Team__card Team__card-1'>
+        <div
+          className='Team__card Team__card-1'
+          data-aos='zoom-in-left'
+          data-aos-delay='50'
+          data-aos-offset='300'
+          data-aos-duration='600'
+        >
           <div className='Team__card-box'>
             <img src={Pic1} alt='Not Found' className='Team__card--img' />
             <div className='Team__card--text'>
@@ -24,7 +30,13 @@ export const TeamSection: React.FC<Props> = ({ teamRef }): JSX.Element => {
           </div>
           <Button text='Download resume' size='small' />
         </div>
-        <div className='Team__card Team__card-2'>
+        <div
+          className='Team__card Team__card-2'
+          data-aos='zoom-in'
+          data-aos-delay='100'
+          data-aos-offset='300'
+          data-aos-duration='600'
+        >
           <div className='Team__card-box'>
             <img src={Pic2} alt='Not Found' className='Team__card--img' />
             <div className='Team__card--text'>
@@ -34,7 +46,13 @@ export const TeamSection: React.FC<Props> = ({ teamRef }): JSX.Element => {
           </div>
           <Button text='Download resume' size='small' />
         </div>
-        <div className='Team__card Team__card-3'>
+        <div
+          className='Team__card Team__card-3'
+          data-aos='zoom-in-right'
+          data-aos-delay='150'
+          data-aos-offset='300'
+          data-aos-duration='600'
+        >
           <div className='Team__card-box'>
             <img src={Pic3} alt='Not Found' className='Team__card--img' />
             <div className='Team__card--text'>
@@ -45,6 +63,7 @@ export const TeamSection: React.FC<Props> = ({ teamRef }): JSX.Element => {
           <Button text='Download resume' size='small' />
         </div>
       </div>
+      <hr className='Team__vertical-line' />
     </div>
   );
 };

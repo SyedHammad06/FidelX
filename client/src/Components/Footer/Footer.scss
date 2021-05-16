@@ -1,0 +1,78 @@
+@use '../../sass/variables' as *;
+@use '../../sass/mixins' as *;
+
+.Footer {
+  padding: $main-padding;
+  color: $text-white;
+  background-color: $color-black;
+
+  &__heading {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__sub-heading {
+    font-size: 1.8rem;
+  }
+
+  &__flex {
+    @include flex(space-between, center);
+  }
+
+  &__icon-box {
+    width: 19.5rem;
+    margin-top: 0.5rem;
+    @include flex(space-between, center);
+
+    & svg {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  &__right {
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & svg {
+      width: 4rem;
+      height: 4rem;
+      cursor: pointer;
+    }
+  }
+
+  & svg {
+    fill: #fff;
+  }
+}
+
+@media (max-width: 31.25em) {
+  .Footer {
+    padding: $phone-padding;
+
+    &__sub-heading {
+      font-size: 1.6rem;
+    }
+
+    &__left {
+      & svg {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
+    }
+
+    &__icon-box {
+      width: 17.5rem;
+    }
+
+    &__right {
+      width: 18rem;
+      & svg {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+}

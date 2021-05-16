@@ -1,0 +1,89 @@
+@use '../../sass/variables' as *;
+@use '../../sass/mixins' as *;
+
+.Contact {
+  padding: $main-padding;
+
+  &__heading {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: -1rem;
+    margin-bottom: 5rem;
+  }
+
+  &__form {
+    background-color: $color-white;
+    width: 42%;
+    margin-left: 50%;
+    margin-top: 8rem;
+    color: $text-black;
+    padding: 4rem 2rem;
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    padding: 1rem 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    font-family: inherit;
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid $color-black;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    height: 8rem;
+  }
+
+  &__label {
+    font-size: 2rem;
+  }
+
+  &__vertical-line {
+    width: 10rem;
+    border: 1px solid $color-white;
+    margin: 13rem auto 0 auto;
+    transform: rotateZ(90deg);
+  }
+
+  & button {
+    width: 100%;
+    margin: 2rem auto 0 auto;
+
+    & a {
+      color: $text-black;
+    }
+
+    & svg {
+      fill: $color-black;
+    }
+  }
+}
+
+@media (max-width: 62.5em) {
+  .Contact__form {
+    width: 50%;
+  }
+}
+
+@media (max-width: 43.75em) {
+  .Contact__form {
+    width: 80%;
+    margin: 8rem auto 0 auto;
+  }
+}
+
+@media (max-width: 31.25em) {
+  .Contact {
+    padding: $phone-padding;
+  }
+  .Contact__form {
+    width: 100%;
+  }
+}
