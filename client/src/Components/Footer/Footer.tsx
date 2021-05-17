@@ -6,9 +6,7 @@ interface Props {}
 export const Footer: React.FC<Props> = (): JSX.Element => {
   return (
     <div className='Footer'>
-      <h2 className='Footer__heading' data-aos='fade-in'>
-        FidelX
-      </h2>
+      <h2 className='Footer__heading'>FidelX</h2>
       <div className='Footer__flex'>
         <div className='Footer__left'>
           <p className='Footer__sub-heading'>A creative digital agency</p>

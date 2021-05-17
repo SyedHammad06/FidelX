@@ -47,10 +47,10 @@ const App: React.FC = (): JSX.Element => {
   return (
     <Router>
       <div className='App'>
-        <Route path='/blog'>
+        <Route path='/blog' exact>
           <Blog />
         </Route>
-        <Route path='/works'>
+        <Route path='/works' exact>
           <Works />
         </Route>
         <Route path='/' exact>

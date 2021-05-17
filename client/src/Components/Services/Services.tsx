@@ -198,7 +198,7 @@ export const Services: React.FC<Props> = (): JSX.Element => {
           </div>
         </div>
       </div>
-      <Button text='Our work' size='large' to='/work' />
+      <Button text='Our work' size='large' to='/works' />
       <hr className='Services__vertical-line Services__vertical-line-2' />
     </div>
   );
