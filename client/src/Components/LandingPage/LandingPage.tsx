@@ -100,7 +100,7 @@ export const LandingPage: React.FC<Props> = ({
         classNames='nav3'
       >
         <li className='LandingPage__item'>
-          <a href='#contact' className='LandingPage__link'>
+          <a href='/#contact' className='LandingPage__link'>
             Contact
           </a>
         </li>

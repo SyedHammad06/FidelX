@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './App.scss';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { About } from './Components/About/About';
 import { LandingPage } from './Components/LandingPage/LandingPage';
@@ -13,6 +13,7 @@ import { Contact } from './Components/Contact/Contact';
 import { Footer } from './Components/Footer/Footer';
 import { Blog } from './Components/Blog/Blog';
 import { Works } from './Components/Works/Works';
+import { Page } from './Components/404page/404page';
 
 const App: React.FC = (): JSX.Element => {
   const [displayMenu, setDisplayMenu] = useState<boolean>(false);
@@ -47,26 +48,31 @@ const App: React.FC = (): JSX.Element => {
   return (
     <Router>
       <div className='App'>
-        <Route path='/blog' exact>
-          <Blog />
-        </Route>
-        <Route path='/works' exact>
-          <Works />
-        </Route>
-        <Route path='/' exact>
-          <>
-            <LandingPage
-              landingPageRef={landingPageRef}
-              displayMenu={displayMenu}
-            />
-            <About />
-            <TeamSection />
-            <BlogContainer blog={blogRef} />
-            <Services />
-            <Contact />
-            <Footer />
-          </>
-        </Route>
+        <Switch>
+          <Route path='/blog'>
+            <Blog />
+          </Route>
+          <Route path='/works'>
+            <Works />
+          </Route>
+          <Route path='/' exact>
+            <>
+              <LandingPage
+                landingPageRef={landingPageRef}
+                displayMenu={displayMenu}
+              />
+              <About />
+              <TeamSection />
+              <BlogContainer blog={blogRef} />
+              <Services />
+              <Contact />
+              <Footer />
+            </>
+          </Route>
+          <Route>
+            <Page />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );

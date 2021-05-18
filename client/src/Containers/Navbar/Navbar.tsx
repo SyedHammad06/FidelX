@@ -94,7 +94,7 @@ export const Navbar: React.FC<Props> = ({ displayMenu }): JSX.Element => {
         classNames='nav3'
       >
         <li className='LandingPage__item'>
-          <a href='#contact' className='LandingPage__link'>
+          <a href='/#contact' className='LandingPage__link'>
             Contact
           </a>
         </li>
