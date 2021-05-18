@@ -24,7 +24,7 @@ export const Footer: React.FC<Props> = (): JSX.Element => {
         </div>
         <div className='Footer__right'>
           <a
-            href='https://www.facebook.com/fidelx.digi/'
+            href='https://www.facebook.com/FidelX-106783628265391/?ref=pages_you_manage'
             className='Footer__icon-1'
           >
             <svg

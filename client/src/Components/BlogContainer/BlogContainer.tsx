@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import Pic1 from '../../assets/Images/pic1.jpg';
 import Pic2 from '../../assets/Images/pic2.jpg';
 import { Button } from '../Button/Button';
@@ -24,7 +26,9 @@ export const BlogContainer: React.FC<Props> = ({ blog }): JSX.Element => {
             <p className='BlogContainer__sub-heading'>
               Why do you need a website or an app?
             </p>
-            <Button text='Read more' size='small' to='/blog#blog-1' />
+            <Link to='/blog#blog-1'>
+              <Button text='Read more' size='small' />
+            </Link>
           </div>
           <div className='BlogContainer__right'>
             <img src={Pic1} alt='not found' className='BlogContainer__img' />
@@ -38,7 +42,9 @@ export const BlogContainer: React.FC<Props> = ({ blog }): JSX.Element => {
             <p className='BlogContainer__sub-heading'>
               Why great design matters?
             </p>
-            <Button text='Read more' size='small' to='/blog#blog-2' />
+            <Link to='/blog#blog-2'>
+              <Button text='Read more' size='small' />
+            </Link>
           </div>
           <div className='BlogContainer__right'>
             <img src={Pic2} alt='not found' className='BlogContainer__img' />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 
@@ -58,9 +59,9 @@ export const Navbar: React.FC<Props> = ({ displayMenu }): JSX.Element => {
         classNames='navItem'
       >
         <li className='LandingPage__item'>
-          <a href='/' className='LandingPage__link'>
+          <NavLink to='/' className='LandingPage__link'>
             Home
-          </a>
+          </NavLink>
         </li>
       </CSSTransition>
       <CSSTransition
@@ -70,9 +71,9 @@ export const Navbar: React.FC<Props> = ({ displayMenu }): JSX.Element => {
         classNames='nav1'
       >
         <li className='LandingPage__item'>
-          <a href='/works' className='LandingPage__link'>
+          <NavLink to='/works' className='LandingPage__link'>
             Our Work
-          </a>
+          </NavLink>
         </li>
       </CSSTransition>
       <CSSTransition
@@ -82,9 +83,9 @@ export const Navbar: React.FC<Props> = ({ displayMenu }): JSX.Element => {
         classNames='nav2'
       >
         <li className='LandingPage__item'>
-          <a href='/blog' className='LandingPage__link'>
+          <NavLink to='/blog' className='LandingPage__link'>
             Blogs
-          </a>
+          </NavLink>
         </li>
       </CSSTransition>
       <CSSTransition
