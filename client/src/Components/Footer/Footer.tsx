@@ -37,7 +37,7 @@ export const Footer: React.FC<Props> = (): JSX.Element => {
             </svg>
           </a>
           <a
-            href='https://www.instagram.com/fidelx2021/'
+            href='https://www.instagram.com/fidelxdigital/'
             className='Footer__icon-2'
           >
             <svg

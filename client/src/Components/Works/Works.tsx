@@ -112,12 +112,12 @@ export const Works: React.FC<Props> = (): JSX.Element => {
         >
           <img src={Img6} alt='not found' className='Work__img' />
           <a
-            href='https://star-quiz.netlify.app'
+            href='https://star-quiz-app.netlify.app'
             className={
               checked ? 'Work__caption Work__display' : 'Work__caption'
             }
           >
-            https://star-quiz.netlify.app
+            https://star-quiz-app.netlify.app
           </a>
         </div>
       </div>

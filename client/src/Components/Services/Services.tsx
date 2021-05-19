@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import { Button } from '../Button/Button';
 import './Services.scss';
 
@@ -198,7 +199,9 @@ export const Services: React.FC<Props> = (): JSX.Element => {
           </div>
         </div>
       </div>
-      <Button text='Our work' size='large' to='/works' />
+      <Link to='/works'>
+      <Button text='Our work' size='large'  />
+      </Link>
       <hr className='Services__vertical-line Services__vertical-line-2' />
     </div>
   );
