@@ -33,6 +33,7 @@ export const Works: React.FC<Props> = (): JSX.Element => {
           <img src={Img1} alt='not found' className='Work__img' />
           <a
             href='https://pixelitcreatives.netlify.app'
+            target='_blank'
             className={
               checked ? 'Work__caption Work__display' : 'Work__caption'
             }
@@ -49,6 +50,7 @@ export const Works: React.FC<Props> = (): JSX.Element => {
           <img src={Img2} alt='not found' className='Work__img' />
           <a
             href='https://kaustubha-website.netlify.app'
+            target='_blank'
             className={
               checked ? 'Work__caption Work__display' : 'Work__caption'
             }
@@ -65,6 +67,7 @@ export const Works: React.FC<Props> = (): JSX.Element => {
           <img src={Img3} alt='not found' className='Work__img' />
           <a
             href='https://star-movie-reference.netlify.app'
+            target='_blank'
             className={
               checked ? 'Work__caption Work__display' : 'Work__caption'
             }
@@ -81,6 +84,7 @@ export const Works: React.FC<Props> = (): JSX.Element => {
           <img src={Img4} alt='not found' className='Work__img' />
           <a
             href='https://o2premiumcarcare.netlify.app'
+            target='_blank'
             className={
               checked ? 'Work__caption Work__display' : 'Work__caption'
             }
@@ -97,6 +101,7 @@ export const Works: React.FC<Props> = (): JSX.Element => {
           <img src={Img5} alt='not found' className='Work__img' />
           <a
             href='https://googlebooks.netlify.app'
+            target='_blank'
             className={
               checked ? 'Work__caption Work__display' : 'Work__caption'
             }
@@ -113,6 +118,7 @@ export const Works: React.FC<Props> = (): JSX.Element => {
           <img src={Img6} alt='not found' className='Work__img' />
           <a
             href='https://star-quiz-app.netlify.app'
+            target='_blank'
             className={
               checked ? 'Work__caption Work__display' : 'Work__caption'
             }
