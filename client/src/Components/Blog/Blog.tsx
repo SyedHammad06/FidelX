@@ -21,7 +21,7 @@ export const Blog: React.FC<Props> = () => {
       <div className='Blog__section'>
         <div className='Blog__section-1' id='blog-1'>
           <h2 className='Blog__heading' data-aos='fade-in'>
-            Why does your website need a website or an app?
+            Why does your company need a website or an app?
           </h2>
           <div
             className='Blog__sub-section Blog__sub-section-1'
